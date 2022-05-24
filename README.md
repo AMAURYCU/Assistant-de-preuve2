@@ -1,4 +1,4 @@
-#Assistant de preuve pour une logique du 1er ordre sortée
+Assistant de preuve pour une logique du 1er ordre sortée
 
 
 pour compiler : "dune build"
