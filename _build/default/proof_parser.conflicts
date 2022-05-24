@@ -1,0 +1,139 @@
+
+** Conflict (shift/reduce) in state 117.
+** Tokens involved: OR IMP AND
+** The following explanations concentrate on token OR.
+** This state is reached from program after reading:
+
+declaration_sigma list(define_form) HYP IDENT COLON NOT LPAR formule RPAR
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+declaration_sigma list(define_form) list(hypotheses) goal EOF 
+                                    hypotheses list(hypotheses) 
+                                    HYP IDENT COLON formule 
+                                                    (?)
+
+** In state 117, looking ahead at OR, shifting is permitted
+** because of the following sub-derivation:
+
+NOT formule 
+    LPAR formule RPAR . OR LPAR formule RPAR 
+
+** In state 117, looking ahead at OR, reducing production
+** formule -> NOT LPAR formule RPAR
+** is permitted because of the following sub-derivation:
+
+formule OR formule // lookahead token appears
+NOT LPAR formule RPAR . 
+
+** Conflict (shift/reduce) in state 114.
+** Token involved: RPAR
+** This state is reached from program after reading:
+
+declaration_sigma list(define_form) HYP IDENT COLON LPAR atom
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+declaration_sigma list(define_form) list(hypotheses) goal EOF 
+                                    hypotheses list(hypotheses) 
+                                    HYP IDENT COLON formule 
+                                                    (?)
+
+** In state 114, looking ahead at RPAR, reducing production
+** formule -> atom
+** is permitted because of the following sub-derivation:
+
+LPAR formule RPAR OR LPAR formule RPAR // lookahead token appears
+     atom . 
+
+** In state 114, looking ahead at RPAR, shifting is permitted
+** because of the following sub-derivation:
+
+LPAR atom . RPAR 
+
+** Conflict (shift/reduce) in state 99.
+** Tokens involved: OR IMP AND
+** The following explanations concentrate on token OR.
+** This state is reached from program after reading:
+
+declaration_sigma list(define_form) HYP IDENT COLON EXISTS LPAR loption(separated_nonempty_list(COMMA,declaration_param)) RPAR COMMA formule
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+declaration_sigma list(define_form) list(hypotheses) goal EOF 
+                                    hypotheses list(hypotheses) 
+                                    HYP IDENT COLON formule 
+                                                    (?)
+
+** In state 99, looking ahead at OR, shifting is permitted
+** because of the following sub-derivation:
+
+EXISTS LPAR loption(separated_nonempty_list(COMMA,declaration_param)) RPAR COMMA formule 
+                                                                                 formule . OR formule 
+
+** In state 99, looking ahead at OR, reducing production
+** formule -> EXISTS LPAR loption(separated_nonempty_list(COMMA,declaration_param)) RPAR COMMA formule
+** is permitted because of the following sub-derivation:
+
+formule OR formule // lookahead token appears
+EXISTS LPAR loption(separated_nonempty_list(COMMA,declaration_param)) RPAR COMMA formule . 
+
+** Conflict (shift/reduce) in state 88.
+** Tokens involved: OR IMP AND
+** The following explanations concentrate on token OR.
+** This state is reached from program after reading:
+
+declaration_sigma list(define_form) HYP IDENT COLON ALL LPAR loption(separated_nonempty_list(COMMA,declaration_param)) RPAR COMMA formule
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+declaration_sigma list(define_form) list(hypotheses) goal EOF 
+                                    hypotheses list(hypotheses) 
+                                    HYP IDENT COLON formule 
+                                                    (?)
+
+** In state 88, looking ahead at OR, shifting is permitted
+** because of the following sub-derivation:
+
+ALL LPAR loption(separated_nonempty_list(COMMA,declaration_param)) RPAR COMMA formule 
+                                                                              formule . OR formule 
+
+** In state 88, looking ahead at OR, reducing production
+** formule -> ALL LPAR loption(separated_nonempty_list(COMMA,declaration_param)) RPAR COMMA formule
+** is permitted because of the following sub-derivation:
+
+formule OR formule // lookahead token appears
+ALL LPAR loption(separated_nonempty_list(COMMA,declaration_param)) RPAR COMMA formule . 
+
+** Conflict (shift/reduce) in state 3.
+** Token involved: END
+** This state is reached from program after reading:
+
+SIGMA BEGIN
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+program 
+declaration_sigma list(define_form) list(hypotheses) goal EOF 
+(?)
+
+** In state 3, looking ahead at END, shifting is permitted
+** because of the following sub-derivation:
+
+SIGMA BEGIN . END 
+
+** In state 3, looking ahead at END, reducing production
+** in_sigma ->
+** is permitted because of the following sub-derivation:
+
+SIGMA BEGIN in_sigma END // lookahead token appears
+            . 

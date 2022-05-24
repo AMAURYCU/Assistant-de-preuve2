@@ -1,0 +1,74 @@
+type token =
+    TOP
+  | STOP
+  | START
+  | SORT
+  | SIGMA
+  | SEMI
+  | RPAR
+  | RELAT
+  | REAL
+  | RCROCH
+  | PROP
+  | OR
+  | NOT
+  | MUL
+  | LPAR
+  | LCROCH
+  | INTC of int
+  | INT
+  | INFEQ
+  | IMP
+  | IDENT of string
+  | HYP
+  | GOAL
+  | FUN
+  | FC of float
+  | EXISTS
+  | EQ
+  | EOF
+  | END
+  | DPEC
+  | DEF
+  | CONST
+  | COMMA
+  | COLON
+  | BOTTOM
+  | BEGIN
+  | ARROW
+  | AND
+  | ALL
+  | AD
+val menhir_begin_marker : int
+val xv_term : Proof_ast.term
+val xv_sort_sigma : Proof_ast.sort_sigma
+val xv_sort : Proof_ast.sort
+val xv_separated_nonempty_list_MUL_sort_ : Proof_ast.sort list
+val xv_separated_nonempty_list_COMMA_term_ : Proof_ast.term list
+val xv_separated_nonempty_list_COMMA_declaration_param_ :
+  Proof_ast.declaration_param list
+val xv_separated_list_MUL_sort_ : Proof_ast.sort list
+val xv_separated_list_COMMA_term_ : Proof_ast.term list
+val xv_separated_list_COMMA_declaration_param_ :
+  Proof_ast.declaration_param list
+val xv_relat_sigma : Proof_ast.relat_sigma
+val xv_program : Proof_ast.prog
+val xv_loption_separated_nonempty_list_MUL_sort__ : Proof_ast.sort list
+val xv_loption_separated_nonempty_list_COMMA_term__ : Proof_ast.term list
+val xv_loption_separated_nonempty_list_COMMA_declaration_param__ :
+  Proof_ast.declaration_param list
+val xv_list_hypotheses_ : Proof_ast.hyp list
+val xv_list_define_form_ : Proof_ast.define_form list
+val xv_in_sigma :
+  Proof_ast.fun_sigma list * Proof_ast.const_sigma list *
+  Proof_ast.sort_sigma list * Proof_ast.relat_sigma list
+val xv_hypotheses : Proof_ast.hyp
+val xv_goal : Proof_ast.goal
+val xv_fun_sigma_pv : Proof_ast.fun_sigma
+val xv_formule : Proof_ast.form
+val xv_define_form : Proof_ast.define_form
+val xv_declaration_sigma : Proof_ast.declaration_sigma
+val xv_declaration_param : Proof_ast.declaration_param
+val xv_const_sigma_pv : Proof_ast.const_sigma
+val xv_atom : Proof_ast.atom
+val menhir_end_marker : int

@@ -1,0 +1,83 @@
+type token =
+    VFH
+  | UNPACK
+  | UFH
+  | TOP
+  | SWAP
+  | STOP
+  | START
+  | SPLITH
+  | SORT
+  | SIGMA
+  | SEMI
+  | RPAR
+  | REPLACE
+  | RELAT
+  | REAL
+  | RCROCH
+  | QTE
+  | PROP
+  | PNG
+  | OR
+  | NOT
+  | MUL
+  | MP
+  | LPAR
+  | LEMME
+  | LCROCH
+  | IOL
+  | INTRO
+  | INTC of int
+  | INT
+  | INFEQ
+  | IMP
+  | II
+  | IFA
+  | IEXIST
+  | IEXA
+  | IDENT of string
+  | IAX
+  | IAND
+  | IABS
+  | HYP
+  | GOAL
+  | FUN
+  | FC of float
+  | EXISTS
+  | ETP
+  | EQL
+  | EQ
+  | EOF
+  | END
+  | ELIM
+  | DPEC
+  | DERIVE
+  | DEF
+  | CONTRAPOSE
+  | CONST
+  | CONH
+  | COMMA
+  | COLON
+  | BOTTOM
+  | BEGIN
+  | ARROW
+  | AND
+  | ALL
+  | AD
+val menhir_begin_marker : int
+val xv_term : Proof_ast.term
+val xv_sort : Proof_ast.sort
+val xv_separated_nonempty_list_COMMA_term_ : Proof_ast.term list
+val xv_separated_nonempty_list_COMMA_declaration_param_ :
+  Proof_ast.declaration_param list
+val xv_separated_list_COMMA_term_ : Proof_ast.term list
+val xv_separated_list_COMMA_declaration_param_ :
+  Proof_ast.declaration_param list
+val xv_program : Proof_ast.tact
+val xv_loption_separated_nonempty_list_COMMA_term__ : Proof_ast.term list
+val xv_loption_separated_nonempty_list_COMMA_declaration_param__ :
+  Proof_ast.declaration_param list
+val xv_formule : Proof_ast.form
+val xv_declaration_param : Proof_ast.declaration_param
+val xv_atom : Proof_ast.atom
+val menhir_end_marker : int

@@ -1,0 +1,8 @@
+SIGMA{fun g: real -> real; fun f: real-> real ; const c: int; const c2: real; sort freal; relat GT: real*pint;fun app: freal*real ->real;sort pint;fun comp: freal*freal ->freal; const F: freal;const G: freal;}
+DEF surjective (h:freal): prop := forall(y:real), exists(x:real), app(h,x)= y
+DEF isf (F: freal):prop:= forall(x:real), app(F,x)=f(x)
+DEF isg (F: freal):prop:= forall(x:real), app(F,x)=g(x)
+HYP H1: isf(F) 
+HYP H2: isg(G)
+GOAL G1: ((forall(y:real), exists(x:real), f(x)=y) and (forall(y:real), exists(x:real), g(x)=y)) => (forall(y:real), exists(x:real), f(g(x))=y)
+(*identifier logique  regles mises en place  expliquer systeme de preuve avec des tactiques architecture illustration *)

@@ -1,0 +1,12 @@
+SIGMA{const F: freal; fun g: int -> int; fun f: real-> real ; const c: int; const c2: real; sort freal; relat GT: real*pint;fun app: freal*real ->real;sort pint;fun comp: freal*freal ->freal;}
+DEF surjective (h:freal): prop := forall(y:real), exists(x:real), app(h,x)= y
+DEF isf (F: freal):prop:= forall(x:real), app(F,x)=f(x)
+HYP H1 : forall(x:real,F: freal,G:freal), app(comp(F,G),x)= app(F,app(G,x))
+HYP H2 : TRUE or TRUE and TRUE
+HYP HH: c=5
+HYP HHH:forall(x:real),app(F,x)=f(x)
+HYP H3: forall(x: real), exists(y:real), f(x)= y
+HYP H4: forall(i:real), exists(d:real), f(i)= d
+HYP H5: not(TRUE or TRUE and TRUE)
+
+GOAL G1: forall(G:freal), surjective(F) and surjective(G)(*regarder table des symboles*)

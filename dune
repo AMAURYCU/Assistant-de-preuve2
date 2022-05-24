@@ -1,0 +1,10 @@
+(ocamllex
+  (modules prooflexer formlex ))
+(menhir
+  (flags --explain --dump)
+  (modules proof_parser formparser ))
+(executable
+  (name proofer))
+(env
+  (dev
+    (flags (:standard -warn-error -A))))

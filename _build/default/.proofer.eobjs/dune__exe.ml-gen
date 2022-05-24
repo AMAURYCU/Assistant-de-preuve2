@@ -1,0 +1,38 @@
+(** @canonical Dune__exe.Formlex *)
+module Formlex = Dune__exe__Formlex
+
+
+(** @canonical Dune__exe.Formparser *)
+module Formparser = Dune__exe__Formparser
+
+
+(** @canonical Dune__exe.Interface *)
+module Interface = Dune__exe__Interface
+
+
+(** @canonical Dune__exe.Preuve *)
+module Preuve = Dune__exe__Preuve
+
+
+(** @canonical Dune__exe.Printeur *)
+module Printeur = Dune__exe__Printeur
+
+
+(** @canonical Dune__exe.Proof_ast *)
+module Proof_ast = Dune__exe__Proof_ast
+
+
+(** @canonical Dune__exe.Proof_parser *)
+module Proof_parser = Dune__exe__Proof_parser
+
+
+(** @canonical Dune__exe.Proofer *)
+module Proofer = Dune__exe__Proofer
+
+
+(** @canonical Dune__exe.Prooflexer *)
+module Prooflexer = Dune__exe__Prooflexer
+
+
+(** @canonical Dune__exe.Utility *)
+module Utility = Dune__exe__Utility
